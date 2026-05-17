@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+    }
+    .navbar {
+      background: rgba(0, 0, 0, 0.1);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+    .navbar h2 {
+      font-size: 24px;
+    }
+    .navbar a {
+      background: #667eea;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .navbar a:hover {
+      background: #764ba2;
+    }
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+    h1 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+    p {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    .user-info {
+      background: #f0f0f0;
+      padding: 20px;
+      border-radius: 5px;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <h2>Dashboard</h2>
+    <a href="/logout">Logout</a>
+  </div>
+  <div class="container">
+    <h1>Welcome, <%= user.username %>!</h1>
+    <p>You have successfully logged in.</p>
+    <div class="user-info">
+      <strong>Logged in as:</strong> <%= user.username %>
+    </div>
+    <p>This is your dashboard. You can add more content and features here.</p>
+  </div>
+</body>
+</html>
